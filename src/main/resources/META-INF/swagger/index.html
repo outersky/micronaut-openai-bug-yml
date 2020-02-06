@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'/>
+    <title>demo-0.1</title>
+    <script src='swagger-ui-bundle.js'></script>
+    <script src='swagger-ui-standalone-preset.js'></script>
+    <link href='swagger-ui.css' rel='stylesheet' type='text/css'/>
+    <link href='theme-flattop.css' rel='stylesheet'
+          type='text/css'/>
+</head>
+
+<body>
+<div id='swagger-ui'></div>
+
+<script>
+        window.onload = function() {
+            var ui = SwaggerUIBundle({
+                url: 'demo-0.1.yml',
+                dom_id: '#swagger-ui',
+                deepLinking: true,
+                validatorUrl: null,
+                presets: [
+                    SwaggerUIBundle.presets.apis,
+                    SwaggerUIStandalonePreset
+                ],
+                plugins: [
+                    SwaggerUIBundle.plugins.DownloadUrl
+                ],
+                layout: 'StandaloneLayout'
+            });
+            window.ui = ui;
+        }
+
+
+</script>
+</body>
+
+</html>
